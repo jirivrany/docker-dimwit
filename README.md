@@ -3,6 +3,9 @@ dimwit
 
 Dynamic Image Manipulation Service with Nginx
 
+Forked from (https://github.com/asgoodasnu/docker-dimwit)
+
+With proxy_pass_request_headers  on;
 
 Features
 =========
@@ -11,15 +14,10 @@ Derivative images are created only once per unique url and stored locally.  Dupl
 
 Setup
 =====
-Just run the docker container asgoodasnew/dimwit with Port 80:
+Build and run
 ```
-docker run -d -p 80:80 asgoodasnew/dimwit
-```
-
-You can also mount /mnt/media to the host, make sure www-data does have write-permissions:
-
-```
-docker run -d -p 80:80 -v /imagedata:/mnt/media asgoodasnew/dimwit
+docker build -t dimwit .
+docker run -d -p 80:80 dimwit
 ```
 
 Usage

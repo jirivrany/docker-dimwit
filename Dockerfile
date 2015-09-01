@@ -1,6 +1,4 @@
-FROM dockerfile/nginx
-
-MAINTAINER Daniel Paschke <paschdan@wirkaufens.de>
+FROM tutum/nginx
 
 RUN apt-get update && apt-get install -y nginx-extras-dbg
 
